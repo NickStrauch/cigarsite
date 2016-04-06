@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand name:</strong>
+  <%= @cigar.brand_name %>
+</p>
+
+<p>
+  <strong>Mfgr:</strong>
+  <%= @cigar.mfgr %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @cigar.style %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cigar.description %>
+</p>
+
+<%= link_to 'Edit', edit_cigar_path(@cigar) %> |
+<%= link_to 'Back', cigars_path %> |
+<%= link_to 'Back to Home', home_index_path %>

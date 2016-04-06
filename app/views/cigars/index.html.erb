@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cigars <small> Please leave a comment below if you want to see more </small></h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Brand name</th>
+      <th>Manufacturer</th>
+      <th>Style</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cigars.each do |cigar| %>
+      <tr>
+        <td><%= cigar.brand_name %></td>
+        <td><%= cigar.mfgr %></td>
+        <td><%= cigar.style %></td>
+        <td><%= cigar.description %></td>
+        <td><%= link_to 'Show', cigar %></td>
+        <td><%= link_to 'Edit', edit_cigar_path(cigar) %></td>
+        <td><%= link_to 'Destroy', cigar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_cigar_path do %>
+  <button type="button" class="btn btn-success">Submit New Cigar</button>
+<% end %>
+
+<%= link_to home_index_path do %>
+  <button type="button" class="btn btn-primary">Return to Home</button>
+<% end %>

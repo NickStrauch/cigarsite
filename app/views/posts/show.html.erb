@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<!--Make "Title" big font, position "name" to the lower right of it -->
+
+<div>
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+</div>
+
+<div>
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+<div>
+
+<%= link_to edit_post_path(@post) do %> 
+  <button type="button" class="btn btn-info">Edit </button>
+<% end %>
+|
+<%= link_to posts_path do %> 
+  <button type="button" class="btn btn-info"> Back </button>
+<% end %>
+|
+<%= link_to home_index_path do %>
+  <button type="button" class="btn btn-info"> Home </button>
+<% end %>

@@ -7,7 +7,11 @@ Things you may want to cover:
 
 * Ruby version
 
+Currently running ruby 2.2.2p95
+
 * System dependencies
+
+Using Ubuntu v. xx in an Oracle Virtualbox virtual machine. Rails 4.2.1
 
 * Configuration
 
